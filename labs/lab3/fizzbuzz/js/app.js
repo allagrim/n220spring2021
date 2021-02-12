@@ -7,13 +7,15 @@ function setup(){
 }
 
 function draw(){
-  let i = 0;
+  let i = 1;
   let x = 30;
   let y = 200;
   // S is size
   let s = 25;
 
-  while(i<25)
+  noStroke();
+
+  while(i<26)
   {
 
     //makes Black circle
@@ -27,22 +29,17 @@ function draw(){
     //makes green rectangle
     if(i % 5 === 0){
       fill(0,255,0);
-      rect(x-14,y-12,s,s);
+      rect(x-13,y-13,s+1,s+1);
     }
 
     //makes blue rectangle
     if(i % 3 === 0 && i % 5 === 0){
       fill(0,0,255);
-      rect(x-14,y-12,s,s);
+      rect(x-13,y-13,s+1,s+1);
     }
 
-  
-    
     x+= 25;
     i+= 1;
   }
-  //Removes first blue square that I have no idea how it got there.
-  fill(255,255,255);
-  stroke(255,255,255);
-  rect(16,200-12,s,s);
+  
 }
