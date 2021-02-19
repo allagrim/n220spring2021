@@ -2,7 +2,7 @@ let color = ["#ff0000","#ffa500","#ffff00","#008000","#0000ff","#4b0082","#ee82e
 //Rainbow colors
 var i = 0;
 function setup(){
-    createCanvas(600,600);
+    createCanvas(2500,900);
     background(0);
 }
 
@@ -15,7 +15,7 @@ function draw(){
   noStroke();
   
   background(0);
-    circle(mouseX,mouseY,60); 
+    circle(mouseX,mouseY,100); 
 
     //make i change to make the color change
     //when framecount = 60 i adds 1

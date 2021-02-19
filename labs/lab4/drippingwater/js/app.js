@@ -1,5 +1,5 @@
 function setup(){
-    createCanvas(300,300);
+    createCanvas(2500,900);
 }
 
 let i = 0;
@@ -18,11 +18,11 @@ function draw(){
 
     if(frameCount % 10 == 0) {
         y.push(0);
-        x.push(random([0],[300])) 
+        x.push(random([0],[2500])) 
     }  
 
     for(let i = 0; i < y.length; i++) {
-        circle(x[i], y[i], 30);
+        circle(x[i], y[i], 80);
         y[i] = y[i] + 5;
     }
     
