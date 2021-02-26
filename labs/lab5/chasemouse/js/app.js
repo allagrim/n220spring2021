@@ -1,21 +1,63 @@
-let color = ["#ff0000","#ffa500","#ffff00","#008000","#0000ff","#4b0082","#ee82ee"];
-//Rainbow colors
-var i = 0;
 function setup(){
-    createCanvas(2500,900);
-    background(0);
+    createCanvas(600,600);
+    background(100);
 }
 
+circleX = 10;
+circleY = 10;
+//Defines the circle positions and where it starts
+xSpeed = 2;
+ySpeed = 2;
 
-
-
-
+rectX = 400;
+rectY = 500;
+rectW = 200;
+rectH = 100;
 
 function draw(){
-  noStroke();
-  
-  background(0);
-    circle(mouseX,mouseY,50); 
+    background(100);
+    noStroke();
 
+    //Drawing, and moving the circle
+    fill("#0008ff")
+    circle(circleX, circleY, 50);
+    circleX= circleX + xSpeed;
+    circleY = circleY + ySpeed;
+    
+
+    //Drawing the rectangle
+    fill("#ff0040")
+    rect(rectX,rectY,rectW,rectH);
+
+    if(collideRect(circleX+10,circleY,rectX,rectY,rectW,rectH) == true){
+        ySpeed = -ySpeed;
+    }
+    
+    
+   
     
 }
+
+
+
+
+
+function collideRect(circleX, circleY, rectX, rectY, rectW, rectH) {
+
+    var colliding = false;
+
+    if(circleX > rectX && circleX < rectX + rectW) {
+
+        if(circleY > rectY && circleY < rectY + rectH) {
+
+              return true;
+
+        }
+
+   }
+
+   return false;
+   
+}
+
+
