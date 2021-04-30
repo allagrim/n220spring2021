@@ -4,6 +4,6 @@ let dvOutput = document.querySelector("#dvOutput");
 
 function sayHello(){
     if( user.value == "username" && pass.value == "password"){
-        dvOutput.innerHTML = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        dvOutput.innerHTML = "Correct Username and Password, welcome";
     }
 }
